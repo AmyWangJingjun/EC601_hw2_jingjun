@@ -11,18 +11,38 @@
 
     <title>Jingjun home page</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="../../dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="/manifest.json">
+
+    <!-- Add to home screen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="Friendly Pix">
+    <meta name="theme-color" content="#303F9F">
+    <link rel="icon" sizes="192x192" href="/images/touch/touch-icon-192x192.png">
+    <link rel="icon" sizes="128x128" href="/images/touch/touch-icon-128x128.png">
+
+    <!-- Add to home screen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="/images/touch/touch-icon-180x180.png">
+    <link rel="apple-touch-icon-precomposed" href="/images/touch/touch-icon-180x180.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+    <!-- Tile icon for Win8 -->
+    <meta name="msapplication-TileImage" content="/images/touch/touch-icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+    <meta name="msapplication-navbutton-color" content="#303F9F">
+
 
     <!-- Custom styles for this template -->
     <link href="blog.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -43,11 +63,12 @@
       <div class="container">
         <nav class="blog-nav">
           <a class="blog-nav-item active" href="index.html" >Home</a>
-          <a class="blog-nav-item" href="Resume.html" >Resume</a>
-          <a class="blog-nav-item" href="https://www.linkedin.com/in/jingjun-wang-85316314b/">Linkedin</a>
-          <a class="blog-nav-item" href="https://github.com/AmyWangJingjun/EC601_hw2_jingjun">Github Account</a>
+          <a class="blog-nav-item" href="resume.html" >Resume</a>
+          <a class="blog-nav-item" href="https://www.linkedin.com/in/jingjun-wang-85316314b/" target=" " >Linkedin</a>
+          <a class="blog-nav-item" href="https://github.com/AmyWangJingjun/EC601_hw2_jingjun" target=" "  >Github Account</a>
           <a class="blog-nav-item" href="Contact_me.html">Contact Me</a>
           <a class="blog-nav-item" href="About.html" >About</a>
+          <a class="blog-nav-item" href="https://friendlychat-9e5b7.firebaseapp.com" >Chat With Me</a>
         </nav>
       </div>
     </div>
@@ -59,15 +80,23 @@
         <p class="lead blog-description">Homepage of Jingjun Wang</p>
       </div>
 
-    
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
+    
+    <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA0VAqTlK5TYDMpnhO-cQhSaASAiar_Wx8",
+            authDomain: "jingjun-ec601-hw2.firebaseapp.com",
+            databaseURL: "https://jingjun-ec601-hw2.firebaseio.com",
+            projectId: "jingjun-ec601-hw2",
+            storageBucket: "",
+            messagingSenderId: "256913622661"
+        };
+    firebase.initializeApp(config);
+        </script>
+     </body>
 </html>
